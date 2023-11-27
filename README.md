@@ -4,7 +4,7 @@ Scrapy spider to reproduce NS&I prize check POST request.
 
 ---
 
-Process:
+_**Process:**_
 
 1. Holder names and numbers strings are loaded in from .env file with python-dotenv.
 2. Holder names and numbers strings are split into lists.
@@ -13,6 +13,19 @@ Process:
 
 ---
 
-Next steps:
+_**example_results.txt:**_
+
+Holder: Example Account (XXXXXXXXX)
+
+Congratulations!\
+You've won £200 in November 2023's draw
+
+Prize History:\
+	Date: November 2023, Bond Number: XXXXXXXXXXX, Prize: £100\
+	Date: November 2023, Bond Number: XXXXXXXXXXX, Prize: £100
+
+---
+
+_**Next steps:**_
 
 Run check on results day, email results to account holders.
