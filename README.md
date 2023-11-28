@@ -28,4 +28,6 @@ Prize History:\
 
 _**Next steps:**_
 
-Run check on results day, email results to account holders.
+1. Detect when it is results day.
+2. Run prize checker.
+3. Email results to account holders.
