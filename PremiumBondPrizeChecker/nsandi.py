@@ -4,7 +4,6 @@ import os
 import scrapy
 from dotenv import load_dotenv
 from scrapy.crawler import CrawlerProcess
-from scrapy.utils.response import open_in_browser
 
 # Load holder name, number pairs from env file:
 load_dotenv()
@@ -21,7 +20,6 @@ class PremiumBondSpider(scrapy.Spider):
     def start_requests(self):
         url = "https://www.nsandi.com/premium-bonds-have-i-won-ajax"
         headers = {
-            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0",
             "Accept": "*/*",
             "Accept-Language": "en-US,en;q=0.5",
             "Accept-Encoding": "gzip, deflate, br",
@@ -29,11 +27,6 @@ class PremiumBondSpider(scrapy.Spider):
             "Content-Type": "application/x-www-form-urlencoded",
             "Origin": "https://www.nsandi.com",
             "Connection": "keep-alive",
-            "Sec-Fetch-Dest": "empty",
-            "Sec-Fetch-Mode": "cors",
-            "Sec-Fetch-Site": "same-origin",
-            "Pragma": "no-cache",
-            "Cache-Control": "no-cache"
         }
 
         # Post request to prize check page for each holder:
